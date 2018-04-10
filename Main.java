@@ -3,11 +3,15 @@ package coding_challenge;
 import java.util.Scanner;
 
 public class Main {
+	
+	static StringBuilder answer = new StringBuilder();
+	
 	public static void main(String []args)
 	{
 		Scanner in = new Scanner(System.in);
 		int query = in.nextInt();
-		int row,col;
+		
+		int row , col ;
 		AlphabetCake cake[] = new AlphabetCake[query];
 		
 		for (int i = 0;i<query;i++)
@@ -17,24 +21,24 @@ public class Main {
 			char input[][] = new char[row][col];
 			for (int k = 0;k<row;k++)
 			{
-				//for (int j = 0;j<col;j++)
-					input[k]=in.next().toCharArray();
+				input[k]=in.next().toCharArray();
 			}
 			cake[i] = new AlphabetCake(row,col,input);
 		}
 		
 		for (int i = 0;i<query;i++)
 		{
-			System.out.println("Case #"+(i+1)+":");
+			answer.append("Case #"+(i+1)+":"+"\n");
 			char result[][] = cake[i].solution();
 			for (char j[]:result)
 			{
 				for (char k:j)
-					System.out.print(k);
-				System.out.println();
+					answer.append(k);
+				answer.append("\n");
 			}
 		}
 		
+		System.out.println(answer);
 		in.close();
 	}
 
