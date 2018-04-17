@@ -1,5 +1,9 @@
 package coding_challenge;
 
+/*
+ *Google CodeJam 2017 Round 1A Question
+ *Solution by @Vivek_Kumar
+ */
 class AlphabetCake {
 	private int row ;
 	private int column ; 
