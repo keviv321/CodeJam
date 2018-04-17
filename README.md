@@ -1,2 +1,2 @@
 # CodeJam
-Solutions to previous CodeJam questions
+Solutions to previous Google CodeJam questions
